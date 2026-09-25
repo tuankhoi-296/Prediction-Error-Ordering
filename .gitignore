@@ -1,0 +1,106 @@
+# ---------------------------------------------------------------- src/
+src/*
+# trace loading, forecasters, error series, ACF
+!src/pipeline.py
+# OFL instance + Threshold(theta)
+!src/ofl_cost2.py
+# Meyerson randomised rule
+!src/robust_c1.py
+# Trust(epsilon) rule + per-series statistics
+!src/c1_final.py
+# 900-series experiment
+!src/verify_c1.py
+# controlled-ordering experiment
+!src/order_control.py
+# dominant-period scan
+!src/spectrum_scan.py
+# the constructed instance
+!src/separation_example.py
+# aggregates figH and figK
+!src/fig_verify.py
+
+# ------------------------------------------------------------ results/
+results/*
+results/*/
+!results/verify_c1_d01.csv
+!results/verify_c1_d02.csv
+!results/verify_c1_d10.csv
+!results/verify_c1_summary.txt
+!results/order_control_d01.csv
+!results/order_control_d02.csv
+!results/order_control_d10.csv
+!results/order_control_summary.txt
+!results/figH_direction.csv
+!results/figK_counterexample.csv
+!results/d01/
+!results/d02/
+results/d01/*
+results/d02/*
+!results/d01/spectrum_period_histogram.csv
+!results/d02/spectrum_period_histogram.csv
+
+# ------------------------------------------------- write-ups and notes
+# The proposal, reports, drafts and working notes are not published here.
+*.pdf
+*.tex
+*.docx
+*.doc
+*.html
+*.htm
+*.rtf
+*.odt
+*.pptx
+*.md
+!README.md
+
+# -------------------------------------------------------- raw input data
+# ~590 MB, download from https://github.com/Azure/AzurePublicDataset
+data/
+invocations_per_function_md.anon.*.csv
+
+# -------------------------------------------- environment and Python noise
+# conda environment, 941 MB
+hd/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# ------------------------------------------------- LaTeX build artefacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.nav
+*.snm
+*.vrb
+.latexmkrc
+
+# ------------------------------------------------------ editor / OS noise
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+ehthumbs.db
+desktop.ini
+Desktop.ini
+.DS_Store
+
+# ----------------------- stray file from a mistyped shell redirect
+/-
+
+# ----------------- figure scripts for the write-ups (not published here)
+Final Proposal/
+Proposal/
+reports/

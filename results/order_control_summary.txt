@@ -1,0 +1,49 @@
+=== Chi phí so với thứ tự ngẫu nhiên (%), theo độ bền áp đặt ===
+  cùng đa tập sai số → η₁ và η∞ giống hệt nhau ở mọi dòng
+  thứ tự     acf(2..30)   τ_int        thr        mey      trust
+  phi-0.60        0.005    1.00      -0.58      -0.02      -0.05
+  phi-0.30        0.000    1.00      -0.31      +0.01      -0.06
+  phi+0.00       -0.001    1.00      -0.06      +0.01      +0.01
+  phi+0.30        0.000    1.50      -0.34      +0.01      -0.08
+  phi+0.60        0.012    2.84      -0.61      +0.08      -0.06
+  phi+0.90        0.143   11.48      -1.87      +0.24      -0.14
+  phi+0.99        0.556   48.87      -4.58      +0.26      -0.31
+  sorted          0.794   83.55     -25.85      -7.48      -4.11
+  real            0.053    4.22      -3.08      -0.48      -0.51
+
+=== Kiểm đơn điệu theo φ (chỉ các thứ tự AR(1), bỏ sorted/real) ===
+  thr    d01: Spearman(φ, chi phí tương đối) = -0.120
+  thr    d02: Spearman(φ, chi phí tương đối) = -0.105
+  thr    d10: Spearman(φ, chi phí tương đối) = -0.112
+  mey    d01: Spearman(φ, chi phí tương đối) = +0.066
+  mey    d02: Spearman(φ, chi phí tương đối) = +0.075
+  mey    d10: Spearman(φ, chi phí tương đối) = +0.065
+  trust  d01: Spearman(φ, chi phí tương đối) = -0.048
+  trust  d02: Spearman(φ, chi phí tương đối) = -0.009
+  trust  d10: Spearman(φ, chi phí tương đối) = -0.048
+
+=== Kiểm GHÉP CẶP trên từng chuỗi (Spearman gộp ở trên bị nhiễu trong-chuỗi lấn át) ===
+  so trên CÙNG một chuỗi sai số, chỉ khác thứ tự
+  thr    φ=0.99 vs ngẫu nhiên             trung vị   -1.96%  rẻ hơn ở  61%  p=7.0e-06
+  thr    sắp xếp vs ngẫu nhiên            trung vị  -25.85%  rẻ hơn ở 100%  p=7.0e-131
+  thr    thật vs ngẫu nhiên               trung vị   -3.08%  rẻ hơn ở  65%  p=7.6e-11
+  thr    thật vs φ=0.90 (τ cao hơn thật)  trung vị   -1.80%  rẻ hơn ở  61%  p=7.0e-06
+  mey    φ=0.99 vs ngẫu nhiên             trung vị   +1.71%  rẻ hơn ở  35%  p=2.7e-10
+  mey    sắp xếp vs ngẫu nhiên            trung vị   -7.48%  rẻ hơn ở  99%  p=1.2e-126
+  mey    thật vs ngẫu nhiên               trung vị   -0.48%  rẻ hơn ở  62%  p=1.5e-07
+  mey    thật vs φ=0.90 (τ cao hơn thật)  trung vị   -0.93%  rẻ hơn ở  66%  p=4.0e-11
+  trust  φ=0.99 vs ngẫu nhiên             trung vị   +0.11%  rẻ hơn ở  47%  p=2.4e-01
+  trust  sắp xếp vs ngẫu nhiên            trung vị   -4.11%  rẻ hơn ở 100%  p=7.0e-131
+  trust  thật vs ngẫu nhiên               trung vị   -0.51%  rẻ hơn ở  63%  p=1.7e-08
+  trust  thật vs φ=0.90 (τ cao hơn thật)  trung vị   -0.43%  rẻ hơn ở  62%  p=4.0e-07
+
+=== Thứ tự THẬT rơi vào đâu ===
+  thr    d01: thật  -5.08%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 69% số chuỗi
+  thr    d02: thật  -3.98%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 70% số chuỗi
+  thr    d10: thật  -1.04%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 57% số chuỗi
+  mey    d01: thật  -0.66%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 67% số chuỗi
+  mey    d02: thật  -0.54%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 65% số chuỗi
+  mey    d10: thật  -0.34%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 56% số chuỗi
+  trust  d01: thật  -0.69%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 67% số chuỗi
+  trust  d02: thật  -0.35%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 60% số chuỗi
+  trust  d10: thật  -0.48%   (mốc ngẫu nhiên = 0 theo định nghĩa)   rẻ hơn ngẫu nhiên ở 63% số chuỗi
