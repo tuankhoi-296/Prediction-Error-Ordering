@@ -52,12 +52,13 @@ the costs are $2f$ and $2f + (n/2)M$ — a ratio of $1 + nM/(4f)$, unbounded in
 both $n$ and $M$. The script confirms the hand calculation against the same
 simulator the measurements use.
 
-**Real error orderings are structured.** The dominant periods concentrate at 3,
-5, 10, 15, 30 and 60 minutes — the marks people pick when setting automated
-schedules — and errors run in episodes longer than independent per-minute errors
-would produce (`spectrum_period_histogram.csv`).
+**Real error orderings are structured.** The dominant periods concentrate at the
+marks people pick when setting automated schedules — 5, 10, 15, 30 and 60
+minutes, and 3 minutes for one group of functions — and errors run in episodes
+longer than independent per-minute errors would produce
+(`spectrum_period_histogram.csv`).
 
-**The real order is systematically cheaper than its own permutations**
+**The real order is slightly but systematically cheaper than its own permutations**
 (`figH_direction.csv`, 900 series, 60 permutations each, common random numbers):
 
 | Algorithm | Median gap | Share cheaper than shuffled |
@@ -79,9 +80,13 @@ ascending order:
 | Meyerson | 1.76 |
 | Trust(ε) | 1.33 |
 
-$\eta_1$ and $\eta_\infty$ are identical for every column. The ordering the
-production workload produces sits near the cheap end; the expensive end is
-reached only by deliberate sorting.
+Every column uses the same displacement multiset, so $\eta_1$ and $\eta_\infty$
+are the same up to a small drift (the simulator places each displacement at the
+client rather than at its optimal facility; Appendix A of the proposal measures
+the drift). Sorted ascending, the median cost falls by up to 25 % against a
+random order; sorted descending, it rises by up to 80 %. The ordering the
+production workload produces sits near the middle of that range, close to the
+random baseline: both extremes are reached only by deliberate sorting.
 
 ## Reproducing
 
